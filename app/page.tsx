@@ -6,8 +6,8 @@ import { Link } from "lucide-react";
 export default function Home() {
   const auth = true;
   return (
-    <main className="bg-[#fffc00]">
-      <div>
+    <div className="bg-[#fffc00]">
+      <div className="min-h-screen flex flex-col items-center justify-center max-w-7xl mx-auto">
         <Navbar></Navbar>
         <main className="flex flex-1 flex-col md:flex-row items-center justify-center px-8 mt-4">
           <div className="flex-1 md:text-left text-center h-full">
@@ -23,35 +23,23 @@ export default function Home() {
                 What are you waiting For?
               </p>
             </div>
-
-            {!auth ? (
-              <Button
-                asChild
-                className="mt-4 bg-black text-white flex items-center rounded-lg gap-2 mx-auto md:mx-0"
-              >
-                <Link href={"/login"} className="max-w-max">
-                  Log in to Explore
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                asChild
-                className="mt-4 bg-black text-white flex items-center rounded-lg gap-2 mx-auto md:mx-0"
-              >
-                <Link href={"/chat"}>
-                  <div className="flex items-center">
-                  
-                    <Image
-                      src={"/logo.svg"}
-                      width={20}
-                      height={20}
-                      alt="Snapchat logo"
-                    />
-                    <span>Start Chatting</span>
-                  </div>
-                </Link>
-              </Button>
-            )}
+            <div className="flex items-center">
+              <div></div>
+              <div className="bg-white px-4 py-2 flex items-center gap-6 mt-4 rounded-lg">
+                <Image
+                  src={"/logo.svg"}
+                  height={24}
+                  width={24}
+                  alt="logo"
+                ></Image>
+                <div>
+                  <a href="/login">
+                    {" "}
+                    <h1 className="font-semibold">Login to Explore</h1>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="flex-1 md:w-full md:flex">
             <Image
@@ -63,6 +51,6 @@ export default function Home() {
           </div>
         </main>
       </div>
-    </main>
+    </div>
   );
 }
