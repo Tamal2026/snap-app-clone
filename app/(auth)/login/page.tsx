@@ -1,10 +1,9 @@
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LoginCard from "./login-card";
 
-
-export default async function LoginPage  ()  {
+const LoginPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="p-8 bg-white rounded-lg shadow-md min-w-80">
@@ -14,7 +13,7 @@ export default async function LoginPage  ()  {
         <h1 className="text-2xl font-bold text-center mb-4">
           Log in to SnapNext
         </h1>
-      
+        <LoginCard></LoginCard>
       </div>
     </div>
   );

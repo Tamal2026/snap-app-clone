@@ -24,11 +24,14 @@ function LoginCard() {
 
 function LoginButton() {
   return (
-    <Button>
-      <Image src={"/github.svg"} width={20} height={20} alt="Github Logo">
-        {" "}
-        Login With Github
-      </Image>
+    <Button className="my-3"> 
+      <Image
+        src={"/github.svg"}
+        width={20}
+        height={20}
+        alt="Github Logo"
+      ></Image>
+      Login With Github
     </Button>
   );
 }
