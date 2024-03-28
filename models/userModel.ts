@@ -6,9 +6,9 @@ export interface Iuser {
   avatar?: string;
 }
 
-export interface IuserDocument extends Iuser, Document{
-    createdAt: Date;
-    updatedAt: Date;
+export interface IuserDocument extends Iuser, Document {
+  createdAt: Date;
+  updatedAt: Date;
 }
 const userSchema = new mongoose.Schema<IuserDocument>({
   userName: {
@@ -32,5 +32,6 @@ const userSchema = new mongoose.Schema<IuserDocument>({
   },
 });
 
-const User:Model<IuserDocument> = mongoose.models?.User || mongoose.model("user", userSchema);
+const User: Model<IuserDocument> =
+  mongoose.models?.User || mongoose.model("user", userSchema);
 export default User;
